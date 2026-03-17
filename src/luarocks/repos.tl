@@ -196,9 +196,8 @@ function repos.run_hook(rockspec: Rockspec, hook_name: string): boolean, string
 end
 
 function repos.should_wrap_bin_scripts(rockspec: Rockspec): boolean
-
-   if cfg.wrap_bin_scripts then
-      return cfg.wrap_bin_scripts
+   if cfg.wrap_bin_scripts == false then
+      return false
    end
    if rockspec.deploy and rockspec.deploy.wrap_bin_scripts == false then
       return false

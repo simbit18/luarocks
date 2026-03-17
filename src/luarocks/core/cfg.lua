@@ -187,6 +187,7 @@ local function make_defaults(lua_version, target_cpu, platforms, home)
       deps_mode = "one",
       no_manifest = false,
       check_certificates = false,
+      wrap_bin_scripts = true,
 
       cache_timeout = 60,
       cache_fail_timeout = 86400,
